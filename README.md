@@ -1,2 +1,2 @@
 # login-register-form
-Simple login/register form vith validation 
+Simple bootstrap login/register form vith validation 
