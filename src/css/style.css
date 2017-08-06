@@ -15,7 +15,7 @@ body {
 }
 
 .wrapper{
-  background-image: url('../img/background.jpg');
+  background-image: url('../background.jpg');
   background-position: center;
   width: 100%; 
   min-height: 100vh;
