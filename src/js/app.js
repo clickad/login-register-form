@@ -28,10 +28,11 @@
     },
     openForm: function(event) {
       event.preventDefault();
-      var elToHide = $(event.target).parent().parent();
-      var index = elToHide.index();
-      elToHide.hide();
+      var formToHide = $(event.target).parent().parent();
+      var index = formToHide.index();
+      formToHide.hide();
       index === 0 ? $(this.$tabcontent[1]).show() : $(this.$tabcontent[0]).show();
+      this.fixHeight();
     },
     fixHeight: function(){ // Cannot use min-height on wrapper because of ie bug with flex box
       var wrapperHeight = this.$wrapper.height();
