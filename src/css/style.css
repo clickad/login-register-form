@@ -8,47 +8,41 @@ a:hover{
   color: #027b76 !important;
 }
 
+body, 
+html,
+.wrapper{
+  height: 100%;
+}
+
 body {
+ 
  font-family: Arial, Helvetica, sans-serif;
+	
   color: #333;
+	
   width:100%
 }
 
+
+
 .wrapper{
-  background-image: url('../background.jpg');
+  background-image: url('../img/background.jpg');
   background-position: center;
+  background-size: cover;
   width: 100%; 
-  min-height: 100vh;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   -webkit-filter: grayscale(50%);
-  filter: grayscale(50%);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d; 
-}
+  
+filter: grayscale(50%);
 
-.container{
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d; 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.form{ 
   display: flex;
   display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center; 
+  height: 100%;
 }
 
 textarea:hover, 
@@ -68,24 +62,18 @@ label:focus,
   -webkit-appearance:none;
 }
 
-h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #efefef;
-}
-
-h5{
-  font-size: 18px;
-}
-
-.form_wrapper{
+.form-wrapper{
   border-radius: 10px;
   background-color: transparent;
   padding: 80px 20px;
   overflow: auto;
-  background: rgba(10,10,10,0.6);
-  border: 1px solid #015976;
+  background: rgb(20,20,20);
+  background: rgba(20,20,20,0.8);
   display: none;
+}
+
+.form-box{
+  min-width: 33%;
 }
 
 .form-control{
@@ -116,14 +104,23 @@ h5{
 }
 
 .inner-addon {
+
   position: relative;
+
 }
 
+
+
 .inner-addon .glyphicon {
-  position: absolute; 
+  
+  position: absolute;
+  
   padding: 10px;
+  
   pointer-events: none;
+
 }
+
 
 .left-addon .glyphicon  {
   left:  0px;
@@ -135,9 +132,13 @@ h5{
   color: #444;
 }
 
+
+
+
 .left-addon input  {
   padding-left:  30px; 
 }
+
 
 .right-addon input {
   padding-right: 30px; 
@@ -150,3 +151,9 @@ h5{
 .back-icon{
   top: 2px;
 }
+
+
+
+
+
+
