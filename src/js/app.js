@@ -38,11 +38,7 @@
     fixHeight: function(){ // Cannot use min-height on wrapper because of ie bug with flex box
       var wrapperHeight = this.$wrapper.height();
       var formHeight = this.$form.height();
-      if(wrapperHeight < formHeight){
-        this.$wrapper.height(formHeight);
-      } else{
-        this.$wrapper.height('100%');
-      }
+      wrapperHeight < formHeight ? this.$wrapper.height(formHeight) : this.$wrapper.height('100%');
     }
   };
 
