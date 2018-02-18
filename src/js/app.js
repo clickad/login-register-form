@@ -22,11 +22,9 @@
       this.$confirmPassword.on('keyup', this.validatePassword.bind(this));
     },
     validatePassword: function(){
-      if(this.$password.val() != this.$confirmPassword.val()) {
-        this.$confirmPassword[0].setCustomValidity("Passwords Don't Match");
-      } else {
+      this.$password.val() != this.$confirmPassword.val() ?
+        this.$confirmPassword[0].setCustomValidity("Passwords Don't Match") :
         this.$confirmPassword[0].setCustomValidity('');
-      }
     },
     openForm: function(event) {
       event.preventDefault();
