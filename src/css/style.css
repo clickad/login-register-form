@@ -62,18 +62,25 @@ label:focus,
   -webkit-appearance:none;
 }
 
-.form-wrapper{
+.form-container{
+  min-width: 33%;
+  max-height: 95vh;
+  overflow: auto;
   border-radius: 10px;
   background-color: transparent;
-  padding: 80px 20px;
-  overflow: auto;
+  padding: 60px 20px;
   background: rgb(20,20,20);
   background: rgba(20,20,20,0.8);
+  display:none;
+}
+
+.form-wrapper{
   display: none;
+  height: auto;
 }
 
 .form-box{
-  min-width: 33%;
+  padding: 10px 0;
 }
 
 .form-control{
@@ -150,6 +157,12 @@ label:focus,
 
 .back-icon{
   top: 2px;
+}
+
+@media (max-width: 768px){
+  .form-container{
+    padding: 20px 20px;
+  }
 }
 
 
