@@ -1,8 +1,8 @@
-(function(){
+(()=> {
   'use strict';
-  var app = {
+  let app = {
     init: function() {
-      var self = this;
+      let self = this;
       this.$window = $(window);
       this.$wrapper = $('.wrapper');
       this.$formWrapper = $(".form-container");
@@ -13,7 +13,7 @@
       this.$tabcontent = $(".form-wrapper");
       this.$link = $('.nav_link');
       this.$formWrapper.show();
-      setTimeout(function(){
+      setTimeout(() =>{
         self.$defaultForm.fadeIn('slow');
       });
 
@@ -28,14 +28,14 @@
     },
     openForm: function(event) {
       event.preventDefault();
-      var formToHide = $(event.target).parent().parent();
-      var index = formToHide.index();
+      let formToHide = $(event.target).parent().parent();
+      let index = formToHide.index();
       formToHide.hide();
       index === 0 ? $(this.$tabcontent[1]).show() : $(this.$tabcontent[0]).show();
     }
   };
 
-  $(window).on('load', function(){
+  $(window).on('load', ()=> {
     app.init();
   });
 })();
